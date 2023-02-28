@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tables
+      author: Artyom Ivanov
+      changes:
+        - createTable:
+            tableName: cities
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: latitude
+                  type: decimal(9,5)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: longitude
+                  type: decimal(9,5)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: distances
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: from_city_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    references: cities(id)
+                    foreignKeyName: from_city_fk
+              - column:
+                  name: to_city_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    references: cities(id)
+                    foreignKeyName: to_city_fk
+              - column:
+                  name: distance
+                  type: float
+                  constraints:
+                    nullable: false
