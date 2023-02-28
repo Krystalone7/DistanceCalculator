@@ -1,0 +1,66 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data
+      author: Artem
+      changes:
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: Moscow
+              - column:
+                  name: latitude
+                  value: 55.55
+              - column:
+                  name: longitude
+                  value: 37.61
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: Prague
+              - column:
+                  name: latitude
+                  value: 50.09
+              - column:
+                  name: longitude
+                  value: 14.42
+        - insert:
+            tableName: cities
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: Tokio
+              - column:
+                  name: latitude
+                  value: 35.68
+              - column:
+                  name: longitude
+                  value: 139.69
+        - insert:
+            tableName: distances
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: from_city_id
+                  value: 1
+              - column:
+                  name: to_city_id
+                  value: 2
+              - column:
+                  name: distance
+                  value: 1668
+
