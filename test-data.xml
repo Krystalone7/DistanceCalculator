@@ -1,0 +1,21 @@
+<data>
+    <cities>
+        <city>
+            <name>Samara</name>
+            <latitude>53.2</latitude>
+            <longitude>50.15</longitude>final
+        </city>
+        <city>
+            <name>Paris</name>
+            <latitude>48.85</latitude>
+            <longitude>2.34</longitude>final
+        </city>
+    </cities>
+    <distances>
+        <distance>
+            <fromCityName>Paris</fromCityName>
+            <toCityName>Moscow</toCityName>
+            <cityDistance>2487</cityDistance>
+        </distance>
+    </distances>
+</data>
